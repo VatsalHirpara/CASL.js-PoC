@@ -1,0 +1,7 @@
+<form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
+    <label for="username">username</label><br>
+    <input type="text" id="username" name="username" [(ngModel)]="username"><br>
+    <label for="password">password</label><br>
+    <input type="password" id="password" name="password" [(ngModel)]="password"><br>
+    <button type="submit">Submit</button>
+</form>

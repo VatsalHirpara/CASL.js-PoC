@@ -1,0 +1,43 @@
+<input type="radio" id="admin" name="gender" value="admin" (change)="onItemChange($event.target.value)" checked>
+<label for="admin">admin</label>
+<input type="radio" id="member" name="gender" value="member" (change)="onItemChange($event.target.value)">
+<label for="member">member</label><br><br>
+
+<input type="text" id="textbox" #textbox>
+<button type="submit" (click)="addTodo(textbox.value)"> add</button>
+
+
+<ul>
+    <li *ngFor="let todo of todos">
+        {{todo.name}}
+        <button (click)="removeTodo(todo) " [disabled]="!('delete' | able:'Todo')"> delete</button>
+    </li>
+</ul>
+
+
+<table *ngIf="('viewTable' | able:'all')" style="border:1px solid black">
+    <tr>
+        <th scope="col">dog</th>
+        <th scope="col">cat</th>
+        <th scope="col">horse</th>
+        <th scope="col">iguana</th>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>2</td>
+        <td>10</td>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>2</td>
+        <td>10</td>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>2</td>
+        <td>10</td>
+        <td>500</td>
+    </tr>
+</table>
