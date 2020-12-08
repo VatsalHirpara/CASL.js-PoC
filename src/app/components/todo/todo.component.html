@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
-    <a href="#" class="navbar-brand">Role based Todo app</a>
+    <a href="#" class="navbar-brand">Role based Auth</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -14,10 +14,10 @@
 
 <div class=" container ">
     <div class="container-item ">
-        <input type="text " id="textbox " #textbox placeholder="title " style="width:15em ">
+        <input type="text " id="textbox " #textbox placeholder="Enter title" style="width:15em " class="form-control">
     </div>
     <div class="container-item ">
-        <button type="submit " (click)="addTodo(textbox.value) " class="btn btn-primary btn-sm " style="width: 5em; "> add</button>
+        <button type="submit " (click)="addTodo(textbox.value) " class="btn btn-primary btn-sm form-control" style="width: 5em; "> add</button>
     </div>
 </div>
 
