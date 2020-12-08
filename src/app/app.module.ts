@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Ability, PureAbility } from '@casl/ability';
 import { AbilityModule } from '@casl/angular';
-import { TodoComponent } from './todo/todo/todo.component';
-import { LoginComponent } from './login/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { TodoComponent } from './components/todo/todo.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     AbilityModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    HttpClientModule
   ],
   providers: [
     { provide: Ability, useValue: new Ability() },

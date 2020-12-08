@@ -21,7 +21,12 @@
         "@angular/router": "~9.1.12",
         "@casl/ability": "^4.1.6",
         "@casl/angular": "^4.1.6",
+        "@types/lodash": "^4.14.165",
+        "bootstrap": "^4.5.3",
+        "lodash": "^4.17.20",
         "rxjs": "~6.5.4",
+        "sequelize": "^6.3.5",
+        "sqlite3": "^5.0.0",
         "tslib": "^1.10.0",
         "zone.js": "~0.10.2"
     },

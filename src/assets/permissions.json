@@ -1,0 +1,21 @@
+[{
+        "role": "member",
+        "permissions": [{
+            "action": "read",
+            "subject": "Todo"
+        }, {
+            "action": "manage",
+            "subject": "Todo",
+            "conditions": {
+                "authorId": "${user.id}"
+            }
+        }]
+    },
+    {
+        "role": "admin",
+        "permissions": [{
+            "action": "manage",
+            "subject": "all"
+        }]
+    }
+]
