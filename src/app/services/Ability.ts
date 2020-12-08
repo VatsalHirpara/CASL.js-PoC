@@ -1,0 +1,11 @@
+import { Ability, ForcedSubject, RawRuleOf } from '@casl/ability';
+
+export const actions = ['manage', 'create', 'read', 'update', 'delete','navigation'] as const;
+export const subjects = ['Todo', 'Booking','all'] as const;
+
+export type Abilities = [
+  typeof actions[number],
+  typeof subjects[number] | ForcedSubject<Exclude<typeof subjects[number], 'all'>>
+];
+export type AppAbility = Ability<Abilities>;
+export const createAbility = (rules: RawRuleOf<AppAbility>[]) => new Ability<Abilities>(rules);
