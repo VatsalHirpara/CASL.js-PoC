@@ -1,23 +1,13 @@
 {
     "permissions": [{
+            "action": "read",
+            "subject": "Todo"
+        },
+        {
             "action": "delete",
             "subject": "Todo",
             "conditions": {
                 "authorId": "${user.id}"
-            }
-        }, {
-            "action": "update",
-            "subject": "Booking",
-            "conditions": {
-                "name": "${booking.name}"
-            }
-        },
-        {
-            "action": "update",
-            "subject": "Booking",
-            "conditions": {
-                "status": "${booking.status}",
-                "id": "${booking.id}"
             }
         }
     ]
