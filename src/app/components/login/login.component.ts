@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     if(role==='tester') id = 3
 
 
-    let user: User = { name: 'username', role: role, id: id }
+    let user: User = { name: 'test', role: role, id: id }
     let booking = { name:'bookingname',status: 'active',id:99}
     
     this.currentUser = user
@@ -49,15 +49,16 @@ export class LoginComponent implements OnInit {
     let permissions;
     this.appAbilityService.getPermissions(role).subscribe((res) => {
       permissions = res.permissions
-      permissions = interpolate(JSON.stringify(permissions),{user,booking})
+      permissions = interpolate(JSON.stringify(permissions),{user})
 
       console.log(permissions);      
       let userAbility = createAbility(permissions);
       this.ability.update(userAbility.rules)
       console.log(this.ability.rules);
       this.router.navigate(['todo'])
-
     }, error => console.log(error))
+    
+    this.router.navigate(['todo'])
     window.localStorage.setItem("user",JSON.stringify(user))
   }
 

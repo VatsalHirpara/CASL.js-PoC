@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoComponent } from './components/todo/todo.component';
 import { LoginComponent } from './components/login/login.component';
+import { PermissionGuard } from './guards/permission.guard';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { LoginComponent } from './components/login/login.component';
   ],
   providers: [
     { provide: Ability, useValue: new Ability() },
-    { provide: PureAbility, useExisting: Ability }],
+    { provide: PureAbility, useExisting: Ability },
+    PermissionGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
