@@ -5,8 +5,7 @@
             "conditions": {
                 "authorId": "${user.id}"
             }
-        },
-        {
+        }, {
             "action": "update",
             "subject": "Booking",
             "conditions": {

@@ -35,7 +35,11 @@ export class LoginComponent implements OnInit {
   onSubmit(form) {
 
     let role = form.value.username
-    let id = role==='admin'? 1 : 2 
+    let id
+    if(role==='manager') id = 1
+    if(role==='developer') id = 2
+    if(role==='tester') id = 3
+
 
     let user: User = { name: 'username', role: role, id: id }
     let booking = { name:'bookingname',status: 'active',id:99}

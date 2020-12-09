@@ -1,0 +1,9 @@
+{
+    "permissions": [{
+        "action": "delete",
+        "subject": "Todo",
+        "conditions": {
+            "authorId": "${user.id}"
+        }
+    }]
+}
