@@ -17,7 +17,7 @@ export class TodoComponent implements OnInit {
 
   currentUser:User;
  
-  todos:Todo[] = [{name:'buy groceries',assignee:'manager',authorId:1},{name:'exercise',assignee:'developer',authorId:2},{name:'finish presentation',assignee:'tester',authorId:3}];
+  todos:Todo[] = [{name:'deploy to production',assignee:'manager',authorId:1},{name:'implement story',assignee:'developer',authorId:2},{name:'test application',assignee:'tester',authorId:3}];
 
   constructor(private ability: Ability, private appAbilityService:AppAbilityService, private router:Router) { }
 
